@@ -4,7 +4,6 @@ function reducer(currentState, action) {
   if (currentState === undefined) {
     return {
       number: 3,
-      str: "hello",
     };
   }
   const newState = { ...currentState };

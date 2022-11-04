@@ -1,17 +1,14 @@
 import React from "react";
 import "./style.css";
-import { Provider, useSelector, useDispatch, connect } from "react-redux";
-import store from "./store";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function App() {
   return (
     <div id="container">
       <h1>Root</h1>
       <div id="grid">
-        <Provider store={store}>
-          <Left1></Left1>
-          <Right1></Right1>
-        </Provider>
+        <Left1></Left1>
+        <Right1></Right1>
       </div>
     </div>
   );
@@ -26,7 +23,6 @@ function Left1(props) {
 }
 function Left2(props) {
   const number = useSelector((state) => state.number);
-  const str = useSelector((state) => state.str);
   return (
     <div>
       <h1>Left2 : {number}</h1>
@@ -46,7 +42,7 @@ function Right2(props) {
   const dispatch = useDispatch();
   return (
     <div>
-      <h1>Right3</h1>
+      <h1>Right2</h1>
       <input
         type="button"
         value="+"
